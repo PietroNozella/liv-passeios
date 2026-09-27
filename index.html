@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIV Passeios — a rua também faz parte da rotina</title>
+<meta name="description" content="Conheça a LIV Passeios: uma rotina de passeios para cães feita com atenção ao ritmo, ao ambiente e aos detalhes do caminho.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="LIV Passeios — a rua também faz parte da rotina">
+<meta property="og:description" content="Passeios para cães, com atenção ao ritmo, à rotina e ao que acontece pelo caminho.">
+<meta property="og:image" content="assets/walk-sidewalk.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F0E8">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preload" as="image" href="assets/walk-sidewalk.webp" imagesrcset="assets/walk-sidewalk-720.webp 720w, assets/walk-sidewalk-1080.webp 1080w, assets/walk-sidewalk.webp 1448w" imagesizes="(min-width: 860px) 510px, calc(100vw - 40px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Fraunces:ital,opsz@0,9..144;1,9..144&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mint:#BCFAEF; --sage:#8EAFA7; --cream:#F4E9D8; --paper:#F3F0E8; --ink:#0C1014;
+  --line:rgba(12,16,20,.14); --muted:rgba(12,16,20,.72); --r:10px; --max:1060px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button,a,summary{-webkit-tap-highlight-color:transparent}
+[id]{scroll-margin-top:82px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:20px}
+.mono{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow{font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.meta{font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-180%);background:var(--ink);color:var(--paper);padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+.skip-link:focus{transform:none}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:12px;padding:10px 20px;max-width:var(--max);margin:0 auto}
+.logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none;background:var(--mint)}
+.top-name{font-weight:600;font-size:12px;letter-spacing:.08em}
+.top-cta{margin-left:auto;font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--ink);border-radius:999px;padding:10px 16px;min-height:44px;display:inline-flex;align-items:center;white-space:nowrap}
+.hero{padding:32px 20px 10px}
+.hero-grid{display:grid;gap:24px}
+.hero h1{font-size:clamp(40px,9vw,72px);line-height:.98;letter-spacing:-.025em;margin:14px 0 14px;font-weight:500}
+.hero h1 em{font-family:Fraunces,serif;font-weight:400}
+.lead{font-size:18px;color:var(--muted);max-width:38ch;margin:0}
+.hero-fig{margin:0}
+.hero-fig img{width:100%;aspect-ratio:1000/537;object-fit:cover;object-position:center 54%;border-radius:6px}
+.cap{display:flex;justify-content:space-between;gap:8px;padding:8px 2px;color:var(--muted)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:var(--r);text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--ink)}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-ghost{background:transparent}
+section{padding:68px 0}
+h2{font-size:clamp(32px,7vw,50px);line-height:1.02;letter-spacing:-.025em;margin:0 0 18px;font-weight:500}
+.prose{max-width:42ch;color:#222a31}
+.prose p{margin:0 0 12px}
+.two{display:grid;gap:24px}
+.two img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;object-position:35% center;width:100%}
+.moments{display:grid;gap:1px;margin-top:28px;border:1px solid var(--line);background:var(--line);border-radius:8px;overflow:hidden}
+.moment{display:grid;gap:14px;padding:16px;background:var(--paper)}
+.moment-copy{display:grid;align-content:start;gap:6px}
+.moment-num{font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.moment h3{margin:0;font-size:24px;letter-spacing:-.01em}
+.moment p{margin:0;color:var(--muted)}
+.moment .micro{font-weight:600;font-size:13px;letter-spacing:.02em;color:var(--ink);border-left:3px solid var(--mint);padding-left:10px;width:fit-content}
+.moment img{border-radius:6px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.steps{display:grid;gap:0;margin-top:8px}
+.step{padding:22px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.step b{font-size:19px}
+.step span.n{font-family:Fraunces,serif;font-size:40px;line-height:1}
+.diary{background:var(--cream);border-block:1px solid var(--line)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:14px;overflow-x:auto;padding:6px 20px 18px;scroll-snap-type:x mandatory;scrollbar-width:thin;overscroll-behavior-inline:contain}
+.card{scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.card img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.card-body{padding:14px}
+.card-body strong{display:block;font-size:18px}
+.card-body small{color:var(--muted);font-family:"DM Mono",monospace;font-size:12px}
+.card-link{background:var(--ink);color:var(--paper);text-decoration:none;display:flex;align-items:center;min-height:280px}
+.card-link small{color:var(--mint)!important}
+.card-link strong{font-size:26px!important;line-height:1.1}
+.card-link span{color:rgba(243,240,232,.72)}
+.rail-nav{display:flex;gap:10px;align-items:center;padding:0 20px 18px}
+.rail-nav button{min-width:48px;min-height:48px;border-radius:50%;border:1px solid var(--ink);background:transparent;font-size:18px;cursor:pointer;color:var(--ink)}
+.rail-nav button:disabled{opacity:.32;cursor:not-allowed}
+.hint{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.care-layout{display:grid;gap:26px;align-items:start}
+.care-visual{margin:0;align-self:center}
+.care-visual img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:38% 78%;border-radius:6px}
+.care-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+.care-list li{border-left:2px solid var(--sage);padding:2px 0 2px 12px;color:#242c33}
+.recognition{border-block:1px solid var(--line)}
+.recognition-note{display:grid;gap:18px;padding:22px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--cream) 55%,var(--paper))}
+.recognition-note p{margin:0;max-width:56ch}
+.recognition-note a{width:fit-content;font-weight:600;text-underline-offset:4px}
+.faq-list{max-width:var(--max)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;min-height:44px;display:flex;align-items:center;gap:16px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;font-size:26px;font-weight:400;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin:8px 44px 0 0;max-width:62ch}
+.cta-final{background:var(--ink);color:var(--paper);border-radius:14px;max-width:var(--max);margin:0 auto 12px}
+.cta-final .wrap{padding:56px 24px}
+.cta-final h2{color:var(--paper)}
+.cta-final p{color:rgba(243,240,232,.78);max-width:44ch}
+.cta-final .btn-solid{background:var(--mint);border-color:var(--mint);color:var(--ink)}
+.cta-final .logo{width:56px;height:56px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+.footer-in{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.footer-link{margin-left:auto;text-underline-offset:4px}
+.guide{display:block;width:100%;height:24px;padding:0 20px;max-width:var(--max);margin:0 auto;color:var(--sage)}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 5px var(--mint)}
+@media(max-width:519px){
+  .top-cta{padding-inline:13px;font-size:13px}
+  .btn-row .btn{flex:1 1 100%;width:100%}
+  section{padding:54px 0}
+  .footer-link{width:100%;margin-left:42px}
+}
+@media(min-width:860px){
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:end}
+  .two{grid-template-columns:1fr 1fr;align-items:start}
+  .moments{grid-template-columns:1fr 1fr}
+  .moment{padding:20px}
+  .steps{grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{border-bottom:0;border-left:1px solid var(--line);padding:0 0 0 18px}
+  .rail{grid-auto-columns:32%}
+  .care-layout{grid-template-columns:1fr 1fr;gap:42px}
+  .care-columns{grid-template-columns:1fr 1fr;column-gap:28px}
+  .recognition-note{grid-template-columns:1fr auto;align-items:center;padding:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">pular para o conteúdo</a>
+<header class="top">
+  <div class="top-in">
+    <img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="40" height="40">
+    <span class="top-name">LIV PASSEIOS</span>
+    <a class="top-cta" href="https://www.instagram.com/liv_passeios/">ver no Instagram</a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero wrap" aria-label="Abertura">
+    <div class="hero-grid">
+      <div>
+        <p class="mono eyebrow">LIV PASSEIOS / ON THE WALK</p>
+        <h1 class="reveal">a rua também<br><em>faz parte</em> da rotina.</h1>
+        <p class="lead">Passeios para cães, com atenção ao ritmo, à rotina e ao que acontece pelo caminho.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">ver a rotina no Instagram</a>
+          <a class="btn btn-ghost" href="#como-funciona">como funciona ↓</a>
+        </div>
+      </div>
+      <figure class="hero-fig reveal">
+        <img src="assets/walk-sidewalk.webp" srcset="assets/walk-sidewalk-720.webp 720w, assets/walk-sidewalk-1080.webp 1080w, assets/walk-sidewalk.webp 1448w" sizes="(min-width: 860px) 510px, calc(100vw - 40px)" alt="Cão de peitoral verde caminhando por uma calçada arborizada durante o passeio" width="1448" height="1086" fetchpriority="high">
+        <figcaption class="cap mono"><span>WALK 024</span><span>08:42 / PASSEIO</span></figcaption>
+      </figure>
+    </div>
+  </section>
+  <svg class="guide" viewBox="0 0 600 24" fill="none" aria-hidden="true" preserveAspectRatio="none"><path d="M4 20 C 150 4, 350 4, 596 16" stroke="currentColor" stroke-width="1.5"/></svg>
+
+  <section id="sobre" class="wrap" aria-label="Sobre a LIV">
+    <div class="two">
+      <div>
+        <p class="eyebrow">SOBRE A LIV</p>
+        <h2>quando você não pode ir,<br>ele ainda pode.</h2>
+        <div class="prose"><p>A LIV acompanha cães em seus passeios e transforma essa parte da rotina em um momento de rua, movimento, cheiros, pausas e observação.</p><p>Cada passeio acontece no ritmo daquele cachorro e daquele dia.</p></div>
+      </div>
+      <figure class="reveal" style="margin:0">
+        <img src="assets/leaving-home.webp" srcset="assets/leaving-home-720.webp 720w, assets/leaving-home-1080.webp 1080w, assets/leaving-home.webp 1448w" sizes="(min-width: 860px) 500px, calc(100vw - 40px)" alt="Cão de peitoral e guia saindo de casa para o passeio" width="1448" height="1086" loading="lazy" decoding="async">
+        <figcaption class="cap mono"><span>LIV / ON THE WALK</span><span>RITMO DO DIA</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="o-que-faz" class="wrap" aria-label="O que a LIV faz">
+    <p class="eyebrow">O QUE A LIV FAZ</p><h2>andar é só<br>uma parte.</h2>
+    <div class="moments">
+      <article class="moment"><div class="moment-copy"><p class="moment-num">01 / ANTES</p><h3>preparo a saída.</h3><p>Peitoral, guia, mosquetão. Tudo conferido antes do primeiro passo.</p><p class="micro">antes da rua.</p></div><img src="assets/harness-prep.webp" srcset="assets/harness-prep-720.webp 720w, assets/harness-prep-1080.webp 1080w, assets/harness-prep.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Detalhe do mosquetão preso ao peitoral verde antes do passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><p class="moment-num">02 / DURANTE</p><h3>o nariz também passeia.</h3><p>Andar, cheirar, observar, mudar o ritmo e parar quando precisa.</p><p class="micro">o caminho também é feito de cheiros.</p></div><img src="assets/sniffing-tree.webp" srcset="assets/sniffing-tree-720.webp 720w, assets/sniffing-tree-1080.webp 1080w, assets/sniffing-tree.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão de peitoral cheirando folhas ao redor de uma árvore durante o passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><p class="moment-num">03 / PAUSA</p><h3>pausa também conta.</h3><p>Água, sombra, descanso. Alguns dias pedem outro ritmo.</p><p class="micro">cuidado também é saber diminuir.</p></div><img src="assets/water-break.webp" srcset="assets/water-break-720.webp 720w, assets/water-break-1080.webp 1080w, assets/water-break.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão ao lado de um pote de água durante uma pausa na sombra" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><p class="moment-num">04 / VOLTA</p><h3>de volta pra casa.</h3><p>Porta, elevador, retorno. A rotina termina onde começou.</p><p class="micro">walk complete.</p></div><img src="assets/return-home.webp" srcset="assets/return-home-720.webp 720w, assets/return-home-1080.webp 1080w, assets/return-home.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão de guia atravessando a porta de casa ao retornar do passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="wrap" aria-label="Como funciona">
+    <p class="eyebrow">COMO FUNCIONA</p><h2>guia presa.<br>rua pela frente.</h2>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><b>a gente conversa</b><span class="prose">Você conta um pouco sobre o cachorro e a rotina que precisa.</span></div>
+      <div class="step"><span class="n">02</span><b>tudo se alinha</b><span class="prose">O passeio começa com as informações importantes daquele dia.</span></div>
+      <div class="step"><span class="n">03</span><b>vamos pra rua</b><span class="prose">Ritmo, ambiente, temperatura, pausas e comportamento entram no caminho.</span></div>
+      <div class="step"><span class="n">04</span><b>de volta pra casa</b><span class="prose">O retorno encerra a rotina combinada com o mesmo cuidado da saída.</span></div>
+    </div>
+  </section>
+
+  <section id="rotina" class="diary" aria-label="Rotina real">
+    <div class="wrap"><p class="mono eyebrow">ON THE WALK</p><h2>cada passeio<br>tem seu próprio ritmo.</h2><p class="prose">Um diário curto do que acontece entre a saída e a volta.</p></div>
+    <div class="rail" role="region" aria-label="Diário de passeios" tabindex="0" id="rail">
+      <article class="card"><img src="assets/elevator-return.webp" srcset="assets/elevator-return-720.webp 720w, assets/elevator-return-1080.webp 1080w, assets/elevator-return.webp 1448w" sizes="(min-width: 860px) 340px, 78vw" alt="Cão de guia se aproximando do elevador depois do passeio" width="1448" height="1086" loading="lazy" decoding="async"><div class="card-body"><small>WALK 022 / 09:10</small><strong>voltando pra casa.</strong><span>o elevador já faz parte do caminho.</span></div></article>
+      <article class="card"><img src="assets/water-detail.webp" srcset="assets/water-detail-720.webp 720w, assets/water-detail-1080.webp 1080w, assets/water-detail.webp 1448w" sizes="(min-width: 860px) 340px, 78vw" alt="Pote de água ao lado de um cão durante uma pausa na calçada" width="1448" height="1086" loading="lazy" decoding="async"><div class="card-body"><small>WALK 023 / 16:05</small><strong>pausa técnica.</strong><span>hoje o ritmo pediu água e sombra.</span></div></article>
+      <a class="card card-link" href="https://www.instagram.com/liv_passeios/"><div class="card-body"><small>ON THE WALK</small><strong>o resto<br>no Instagram →</strong><span>acompanhe os registros de rua da LIV.</span></div></a>
+    </div>
+    <div class="rail-nav"><button type="button" id="railPrev" aria-label="Ver registro anterior" aria-controls="rail">←</button><button type="button" id="railNext" aria-label="Ver próximo registro" aria-controls="rail">→</button><span class="hint">arraste →</span></div>
+  </section>
+
+  <section id="cuidado" class="wrap" aria-label="Cuidado na prática">
+    <div class="care-layout">
+      <div><p class="eyebrow">CARE NOTE</p><h2>cuidado também<br>está nos detalhes.</h2><p class="prose">Nem todo cuidado precisa virar discurso. Na rotina, ele aparece nas pequenas decisões antes, durante e depois da rua.</p><ul class="care-list care-columns"><li>conferir o mosquetão</li><li>ajustar o peitoral</li><li>levar água</li><li>observar o clima</li><li>perceber quando diminuir o ritmo</li><li>respeitar uma pausa</li><li>acompanhar a chegada e a saída</li></ul></div>
+      <figure class="care-visual reveal"><img src="assets/harness-care.webp" srcset="assets/harness-care-720.webp 720w, assets/harness-care-1080.webp 1080w, assets/harness-care.webp 1448w" sizes="(min-width: 860px) 500px, calc(100vw - 40px)" alt="Detalhe da guia e do peitoral ajustados no cão durante o passeio" width="1448" height="1086" loading="lazy" decoding="async"><figcaption class="cap mono"><span>EQUIPAMENTO</span><span>CONFERIDO</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="recognition" aria-label="Acompanhe a LIV">
+    <div class="wrap"><div class="recognition-note"><div><p class="eyebrow">LIV NO INSTAGRAM</p><h2>uma rotina que continua por lá.</h2><p>Fotos, vídeos e registros reais vão dar cada vez mais a cara da LIV a este espaço.</p></div><a href="https://www.instagram.com/liv_passeios/">acompanhar @liv_passeios →</a></div></div>
+  </section>
+
+  <section id="faq" class="wrap" aria-label="Perguntas frequentes">
+    <p class="eyebrow">FAQ</p><h2>perguntas de rua.</h2>
+    <div class="faq-list">
+      <details name="faq"><summary>como posso conhecer melhor o trabalho da LIV?</summary><p>O Instagram reúne os registros da rotina e é o melhor lugar para acompanhar o trabalho de perto.</p></details>
+      <details name="faq"><summary>como posso conversar sobre um passeio?</summary><p>Chame a LIV pelo Instagram e conte um pouco sobre o cachorro e a rotina que você procura.</p></details>
+      <details name="faq"><summary>o que entra no ritmo de um passeio?</summary><p>O ambiente, a temperatura, as pausas, os cheiros e o comportamento do cachorro ajudam a definir o ritmo de cada dia.</p></details>
+    </div>
+  </section>
+
+  <section id="contato" aria-label="Contato">
+    <div class="cta-final reveal"><div class="wrap"><img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="56" height="56"><p class="mono" style="color:var(--mint);margin:18px 0 8px">LIV PASSEIOS / INSTAGRAM</p><h2>tem passeio<br>esperando por aí.</h2><p>Quer conhecer melhor a rotina da LIV? Veja os registros e mande uma mensagem pelo Instagram.</p><div class="btn-row"><a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">ver @liv_passeios</a></div></div></div>
+  </section>
+</main>
+
+<footer><div class="wrap footer-in"><img class="logo" src="assets/logo-liv-256.png" alt="" width="28" height="28" style="width:28px;height:28px"><span class="meta">LIV PASSEIOS · <span id="ano">2026</span></span><a class="meta footer-link" href="https://www.instagram.com/liv_passeios/">INSTAGRAM · @LIV_PASSEIOS</a></div></footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('ano').textContent = new Date().getFullYear();
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(element){io.observe(element);});
+} else {
+  document.querySelectorAll('.reveal').forEach(function(element){element.classList.add('in');});
+}
+(function(){
+  var rail=document.getElementById('rail');
+  var previous=document.getElementById('railPrev');
+  var next=document.getElementById('railNext');
+  var navigation=previous.parentElement;
+  function updateControls(){var maximum=Math.max(0,rail.scrollWidth-rail.clientWidth);var start=parseFloat(getComputedStyle(rail).paddingLeft)||0;navigation.hidden=maximum<=2;previous.disabled=rail.scrollLeft<=start+2;next.disabled=rail.scrollLeft>=maximum-2;}
+  function move(direction){rail.scrollBy({left:direction*Math.min(rail.clientWidth*.8,340),behavior:'smooth'});}
+  previous.addEventListener('click',function(){move(-1);});
+  next.addEventListener('click',function(){move(1);});
+  rail.addEventListener('scroll',updateControls,{passive:true});
+  window.addEventListener('resize',updateControls);
+  updateControls();
+})();
+</script>
+</body>
+</html>
