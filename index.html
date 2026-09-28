@@ -52,6 +52,11 @@ header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--p
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:var(--r);text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--ink)}
 .btn-solid{background:var(--ink);color:var(--paper)}
 .btn-ghost{background:transparent}
+.walk-status{display:grid;margin-top:28px;border-block:1px solid var(--line)}
+.status-item{display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.status-item:last-child{border-bottom:0}
+.status-item span{color:var(--muted)}
+.status-item strong{font-size:14px;font-weight:600}
 section{padding:68px 0}
 h2{font-size:clamp(32px,7vw,50px);line-height:1.02;letter-spacing:-.025em;margin:0 0 18px;font-weight:500}
 .prose{max-width:42ch;color:#222a31}
@@ -70,10 +75,30 @@ h2{font-size:clamp(32px,7vw,50px);line-height:1.02;letter-spacing:-.025em;margin
 .step{padding:22px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
 .step b{font-size:19px}
 .step span.n{font-family:Fraunces,serif;font-size:40px;line-height:1}
+.field-notes{background:var(--ink);color:var(--paper);padding-bottom:0;overflow:hidden}
+.field-notes .eyebrow,.field-notes .prose{color:rgba(243,240,232,.72)}
+.field-notes-head{padding-bottom:30px}
+.field-grid{display:grid;background:rgba(243,240,232,.15);gap:1px}
+.field-note{margin:0;background:var(--ink);min-width:0}
+.field-note img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.field-note--path img{object-position:center 46%}
+.field-note figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px 20px 18px;color:rgba(243,240,232,.72)}
+.field-note figcaption strong{color:var(--mint);font-weight:500}
+.trust-panel{display:grid;gap:30px;background:var(--mint);border:1px solid var(--ink);border-radius:14px;padding:28px}
+.trust-panel .eyebrow{color:rgba(12,16,20,.64)}
+.trust-intro{max-width:42ch}
+.trust-intro p{margin:0 0 22px;color:#26312e}
+.trust-list{margin:0;padding:0;list-style:none;border-top:1px solid rgba(12,16,20,.28)}
+.trust-list li{display:grid;grid-template-columns:46px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid rgba(12,16,20,.28)}
+.trust-list span{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.08em;color:rgba(12,16,20,.62)}
+.trust-list strong{display:block;font-size:17px;margin-bottom:2px}
+.trust-list p{margin:0;color:#26312e;font-size:15px}
 .diary{background:var(--cream);border-block:1px solid var(--line)}
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:14px;overflow-x:auto;padding:6px 20px 18px;scroll-snap-type:x mandatory;scrollbar-width:thin;overscroll-behavior-inline:contain}
 .card{scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .card img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.card:nth-child(1) img{object-position:42% center}
+.card:nth-child(2) img{object-position:38% 62%}
 .card-body{padding:14px}
 .card-body strong{display:block;font-size:18px}
 .card-body small{color:var(--muted);font-family:"DM Mono",monospace;font-size:12px}
@@ -120,6 +145,14 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   section{padding:54px 0}
   .footer-link{width:100%;margin-left:42px}
 }
+@media(min-width:520px){
+  .walk-status{grid-template-columns:repeat(3,1fr)}
+  .status-item{display:block;padding:14px 16px;border-bottom:0;border-right:1px solid var(--line)}
+  .status-item:first-child{padding-left:0}
+  .status-item:last-child{border-right:0;padding-right:0}
+  .status-item span,.status-item strong{display:block}
+  .status-item strong{margin-top:3px}
+}
 @media(min-width:860px){
   .hero-grid{grid-template-columns:1.05fr 1fr;align-items:end}
   .two{grid-template-columns:1fr 1fr;align-items:start}
@@ -127,6 +160,9 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   .moment{padding:20px}
   .steps{grid-template-columns:repeat(4,1fr);gap:18px}
   .step{border-bottom:0;border-left:1px solid var(--line);padding:0 0 0 18px}
+  .field-grid{grid-template-columns:repeat(3,1fr)}
+  .field-note:nth-child(2){transform:translateY(-22px)}
+  .trust-panel{grid-template-columns:.9fr 1.1fr;gap:64px;padding:42px}
   .rail{grid-auto-columns:32%}
   .care-layout{grid-template-columns:1fr 1fr;gap:42px}
   .care-columns{grid-template-columns:1fr 1fr;column-gap:28px}
@@ -145,7 +181,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   <div class="top-in">
     <img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="40" height="40">
     <span class="top-name">LIV PASSEIOS</span>
-    <a class="top-cta" href="https://www.instagram.com/liv_passeios/">ver no Instagram</a>
+    <a class="top-cta" href="https://www.instagram.com/liv_passeios/">falar com a LIV</a>
   </div>
 </header>
 
@@ -159,6 +195,11 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
         <div class="btn-row">
           <a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">ver a rotina no Instagram</a>
           <a class="btn btn-ghost" href="#como-funciona">como funciona ↓</a>
+        </div>
+        <div class="walk-status" aria-label="Princípios de um passeio LIV">
+          <div class="status-item"><span class="mono">ANTES</span><strong>contexto alinhado</strong></div>
+          <div class="status-item"><span class="mono">NA RUA</span><strong>ritmo observado</strong></div>
+          <div class="status-item"><span class="mono">NA VOLTA</span><strong>cuidado até o fim</strong></div>
         </div>
       </div>
       <figure class="hero-fig reveal">
@@ -193,6 +234,28 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
     </div>
   </section>
 
+  <section id="notas-de-rua" class="field-notes" aria-label="Notas de rua">
+    <div class="wrap field-notes-head">
+      <p class="mono eyebrow">FIELD NOTES / WALK LOG</p>
+      <h2>a cidade deixa pistas.<br><em style="font-family:Fraunces,serif;font-weight:400">a LIV presta atenção.</em></h2>
+      <p class="prose">Cheiros, sombras e caminhos não são cenário. Eles fazem parte do passeio.</p>
+    </div>
+    <div class="field-grid">
+      <figure class="field-note reveal">
+        <img src="assets/nariz.webp" alt="Cão explorando os cheiros ao redor de uma árvore durante o passeio" width="900" height="506" loading="lazy" decoding="async">
+        <figcaption class="mono"><strong>01 / CHEIRO</strong><span>o nariz escolhe o caminho</span></figcaption>
+      </figure>
+      <figure class="field-note reveal">
+        <img src="assets/sombra.webp" alt="Cão e acompanhante caminhando por uma calçada coberta por sombras de árvores" width="900" height="506" loading="lazy" decoding="async">
+        <figcaption class="mono"><strong>02 / SOMBRA</strong><span>o clima muda o ritmo</span></figcaption>
+      </figure>
+      <figure class="field-note field-note--path reveal">
+        <img src="assets/hero-rua.webp" alt="Cão de peitoral caminhando pela calçada durante o passeio" width="1000" height="537" loading="lazy" decoding="async">
+        <figcaption class="mono"><strong>03 / CAMINHO</strong><span>o passo encontra o ritmo</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section id="como-funciona" class="wrap" aria-label="Como funciona">
     <p class="eyebrow">COMO FUNCIONA</p><h2>guia presa.<br>rua pela frente.</h2>
     <div class="steps">
@@ -200,6 +263,23 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
       <div class="step"><span class="n">02</span><b>tudo se alinha</b><span class="prose">O passeio começa com as informações importantes daquele dia.</span></div>
       <div class="step"><span class="n">03</span><b>vamos pra rua</b><span class="prose">Ritmo, ambiente, temperatura, pausas e comportamento entram no caminho.</span></div>
       <div class="step"><span class="n">04</span><b>de volta pra casa</b><span class="prose">O retorno encerra a rotina combinada com o mesmo cuidado da saída.</span></div>
+    </div>
+  </section>
+
+  <section id="confianca" class="wrap" aria-label="Compromissos da LIV">
+    <div class="trust-panel">
+      <div class="trust-intro">
+        <p class="eyebrow">O QUE SUSTENTA O PASSEIO</p>
+        <h2>confiança começa antes do primeiro passo.</h2>
+        <p>O cuidado aparece em decisões simples e repetidas: entender o dia, conferir o equipamento, observar a rua e acompanhar a volta.</p>
+        <a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">conversar sobre um passeio</a>
+      </div>
+      <ol class="trust-list">
+        <li><span>01</span><div><strong>contexto antes da saída</strong><p>A rotina e as informações importantes daquele dia entram na conversa.</p></div></li>
+        <li><span>02</span><div><strong>equipamento conferido</strong><p>Peitoral, guia e mosquetão são observados antes da rua.</p></div></li>
+        <li><span>03</span><div><strong>atenção ao ambiente</strong><p>Temperatura, cheiros, pausas e comportamento ajudam a definir o ritmo.</p></div></li>
+        <li><span>04</span><div><strong>cuidado até a volta</strong><p>O retorno encerra a rotina com a mesma atenção da saída.</p></div></li>
+      </ol>
     </div>
   </section>
 
@@ -234,7 +314,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   </section>
 
   <section id="contato" aria-label="Contato">
-    <div class="cta-final reveal"><div class="wrap"><img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="56" height="56"><p class="mono" style="color:var(--mint);margin:18px 0 8px">LIV PASSEIOS / INSTAGRAM</p><h2>tem passeio<br>esperando por aí.</h2><p>Quer conhecer melhor a rotina da LIV? Veja os registros e mande uma mensagem pelo Instagram.</p><div class="btn-row"><a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">ver @liv_passeios</a></div></div></div>
+    <div class="cta-final reveal"><div class="wrap"><img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="56" height="56"><p class="mono" style="color:var(--mint);margin:18px 0 8px">LIV PASSEIOS / INSTAGRAM</p><h2>tem passeio<br>esperando por aí.</h2><p>Quer conhecer melhor a rotina da LIV? Veja os registros e mande uma mensagem pelo Instagram.</p><div class="btn-row"><a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">conversar com a LIV</a></div></div></div>
   </section>
 </main>
 
