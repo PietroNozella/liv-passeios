@@ -31,9 +31,6 @@ a{color:inherit}
 button,a,summary{-webkit-tap-highlight-color:transparent}
 [id]{scroll-margin-top:82px}
 .wrap{max-width:var(--max);margin:0 auto;padding-inline:20px}
-.mono{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.eyebrow{font-family:"DM Mono",monospace;font-weight:400;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
-.meta{font-family:"DM Mono",monospace;font-weight:400;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-180%);background:var(--ink);color:var(--paper);padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
 .skip-link:focus{transform:none}
 header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -44,18 +41,14 @@ header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--p
 .hero{padding:32px 20px 10px}
 .hero-grid{display:grid;gap:24px}
 .hero h1{font-size:clamp(40px,9vw,72px);line-height:.98;letter-spacing:-.025em;margin:14px 0 14px;font-weight:500;max-width:11ch;text-wrap:balance}
-.hero h1 em{font-family:Fraunces,serif;font-weight:400}
+.hero h1 em{font-family:Fraunces,serif;font-weight:400;display:inline-block;transform:translateY(-.045em)}
 .lead{font-size:18px;color:var(--muted);max-width:38ch;margin:0}
 .hero-fig{margin:0}
 .hero-fig img{width:100%;aspect-ratio:1000/537;object-fit:cover;object-position:center 54%;border-radius:6px}
-.cap{display:flex;justify-content:space-between;gap:8px;padding:8px 2px;color:var(--muted)}
 .btn-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;align-items:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;border-radius:var(--r);text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--ink)}
 .btn-solid{background:var(--ink);color:var(--paper)}
 .hero-link{font-weight:600;font-size:15px;text-underline-offset:4px;white-space:nowrap}
-.walk-status{display:flex;flex-wrap:wrap;gap:6px 12px;margin:22px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
-.walk-status span{white-space:nowrap}
-.walk-status span+span::before{content:"—";margin-right:12px;color:var(--muted)}
 section{padding:68px 0}
 h2{font-size:clamp(32px,7vw,50px);line-height:1.08;letter-spacing:-.025em;margin:0 0 18px;font-weight:500;text-wrap:balance}
 h2 em{font-family:Fraunces,serif;font-weight:400}
@@ -67,7 +60,6 @@ h2 em{font-family:Fraunces,serif;font-weight:400}
 .moments::-webkit-scrollbar{display:none;width:0;height:0}
 .moment{scroll-snap-align:start;display:grid;gap:14px;padding:16px;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .moment-copy{display:grid;align-content:start;gap:6px}
-.moment-num{font-family:"DM Mono",monospace;font-weight:400;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .moment h3{margin:0;font-size:24px;letter-spacing:-.01em}
 .moment p{margin:0;color:var(--muted)}
 .moment .micro{font-weight:600;font-size:13px;letter-spacing:.02em;color:var(--ink);border-left:3px solid var(--mint);padding-left:10px;width:fit-content}
@@ -77,21 +69,18 @@ h2 em{font-family:Fraunces,serif;font-weight:400}
 .step b{font-size:19px}
 .step span.n{font-family:Fraunces,serif;font-size:40px;line-height:1}
 .field-notes{background:var(--ink);color:var(--paper);padding-bottom:0;overflow:hidden}
-.field-notes .eyebrow,.field-notes .prose{color:rgba(243,240,232,.72)}
+.field-notes .prose{color:rgba(243,240,232,.72)}
 .field-notes-head{padding-bottom:30px}
 .field-grid{display:grid;background:rgba(243,240,232,.15);gap:1px}
 .field-note{margin:0;background:var(--ink);min-width:0}
-.field-note img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.field-note img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 .field-note--path img{object-position:center 46%}
-.field-note figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px 20px 18px;color:rgba(243,240,232,.72)}
-.field-note figcaption strong{color:var(--mint);font-weight:500}
+.field-note figcaption{display:flex;justify-content:flex-end;padding:12px 20px 18px;color:rgba(243,240,232,.72)}
 .trust-panel{display:grid;gap:30px;background:var(--mint);border:1px solid var(--ink);border-radius:14px;padding:28px}
-.trust-panel .eyebrow{color:rgba(12,16,20,.64)}
 .trust-intro{max-width:42ch}
 .trust-intro p{margin:0 0 22px;color:#26312e}
 .trust-list{margin:0;padding:0;list-style:none;border-top:1px solid rgba(12,16,20,.28)}
-.trust-list li{display:grid;grid-template-columns:46px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid rgba(12,16,20,.28)}
-.trust-list span{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.08em;color:rgba(12,16,20,.62)}
+.trust-list li{padding:16px 0;border-bottom:1px solid rgba(12,16,20,.28)}
 .trust-list strong{display:block;font-size:17px;margin-bottom:2px}
 .trust-list p{margin:0;color:#26312e;font-size:15px}
 .diary{background:var(--cream);border-block:1px solid var(--line)}
@@ -103,9 +92,7 @@ h2 em{font-family:Fraunces,serif;font-weight:400}
 .card:nth-child(2) img{object-position:38% 62%}
 .card-body{padding:14px}
 .card-body strong{display:block;font-size:18px}
-.card-body small{color:var(--muted);font-family:"DM Mono",monospace;font-size:12px}
 .card-link{background:var(--ink);color:var(--paper);text-decoration:none;display:flex;align-items:center;min-height:280px}
-.card-link small{color:var(--mint)!important}
 .card-link strong{font-size:26px!important;line-height:1.1}
 .card-link span{color:rgba(243,240,232,.72)}
 .rail-nav{display:flex;gap:10px;align-items:center;padding:0 20px 18px}
@@ -116,12 +103,9 @@ h2 em{font-family:Fraunces,serif;font-weight:400}
 .care-layout{display:grid;gap:26px;align-items:start}
 .care-visual{margin:0;align-self:center}
 .care-visual img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:38% 78%;border-radius:6px}
+.care-note{margin:12px 0 0;color:var(--muted);font-size:15px;max-width:38ch}
 .care-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
 .care-list li{border-left:2px solid var(--sage);padding:2px 0 2px 12px;color:#242c33}
-.recognition{border-block:1px solid var(--line)}
-.recognition-note{display:grid;gap:18px;padding:22px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--cream) 55%,var(--paper))}
-.recognition-note p{margin:0;max-width:56ch}
-.recognition-note a{width:fit-content;font-weight:600;text-underline-offset:4px}
 .faq-list{max-width:var(--max)}
 details{border-bottom:1px solid var(--line);padding:16px 0}
 summary{cursor:pointer;font-weight:600;font-size:18px;min-height:44px;display:flex;align-items:center;gap:16px;list-style:none}
@@ -135,7 +119,6 @@ details p{color:var(--muted);margin:8px 44px 0 0;max-width:62ch}
 .cta-final p{color:rgba(243,240,232,.78);max-width:44ch}
 .cta-final .btn-solid{background:var(--mint);border-color:var(--mint);color:var(--ink)}
 .cta-final .logo{width:56px;height:56px}
-.cta-final .kicker{color:var(--mint);margin:18px 0 8px}
 footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
 .footer-in{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .footer-link{margin-left:auto;text-underline-offset:4px}
@@ -148,9 +131,6 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   .btn-row .btn{flex:1 1 100%;width:100%}
   section{padding:54px 0}
   .footer-link{width:100%;margin-left:42px}
-}
-@media(min-width:520px){
-  .walk-status{gap:8px 16px}
 }
 @media(min-width:860px){
   .hero-grid{grid-template-columns:1.05fr 1fr;align-items:center}
@@ -167,7 +147,6 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   .moments-nav{display:none}
   .care-layout{grid-template-columns:1fr 1fr;gap:42px}
   .care-columns{grid-template-columns:1fr 1fr;column-gap:28px}
-  .recognition-note{grid-template-columns:1fr auto;align-items:center;padding:28px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -191,18 +170,15 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   <section class="hero wrap" aria-label="Abertura">
     <div class="hero-grid">
       <div>
-        <p class="mono eyebrow">LIV PASSEIOS / ON THE WALK</p>
         <h1 class="reveal">a rua também <em>faz parte</em> da rotina.</h1>
         <p class="lead">Passeios para cães, com atenção ao ritmo, à rotina e ao caminho.</p>
         <div class="btn-row">
           <a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">ver a rotina no Instagram</a>
           <a class="hero-link" href="#como-funciona">como funciona ↓</a>
         </div>
-        <p class="walk-status mono" aria-label="Princípios de um passeio LIV"><span>ANTES · contexto alinhado</span><span>NA RUA · ritmo observado</span><span>NA VOLTA · cuidado até o fim</span></p>
       </div>
       <figure class="hero-fig reveal">
         <img src="assets/walk-sidewalk.webp" srcset="assets/walk-sidewalk-720.webp 720w, assets/walk-sidewalk-1080.webp 1080w, assets/walk-sidewalk.webp 1448w" sizes="(min-width: 860px) 510px, calc(100vw - 40px)" alt="Cão de peitoral verde caminhando por uma calçada arborizada durante o passeio" width="1448" height="1086" fetchpriority="high">
-        <figcaption class="cap mono"><span>WALK 024 · 08:42</span><span>calçada arborizada</span></figcaption>
       </figure>
     </div>
   </section>
@@ -211,52 +187,49 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   <section id="sobre" class="wrap" aria-label="Sobre a LIV">
     <div class="two">
       <div>
-        <p class="eyebrow">SOBRE A LIV</p>
         <h2>quando você não pode ir, ele ainda pode.</h2>
         <div class="prose"><p>A LIV acompanha cães em seus passeios e faz dessa parte do dia um momento de rua: movimento, cheiros, pausas e observação.</p><p>Cada passeio acontece no ritmo daquele cachorro e daquele dia.</p></div>
       </div>
       <figure class="reveal" style="margin:0">
         <img src="assets/leaving-home.webp" srcset="assets/leaving-home-720.webp 720w, assets/leaving-home-1080.webp 1080w, assets/leaving-home.webp 1448w" sizes="(min-width: 860px) 500px, calc(100vw - 40px)" alt="Cão de peitoral e guia saindo de casa para o passeio" width="1448" height="1086" loading="lazy" decoding="async">
-        <figcaption class="cap mono"><span>LIV / ON THE WALK</span><span>HORA DE SAIR</span></figcaption>
       </figure>
     </div>
   </section>
 
   <section id="o-que-faz" class="wrap" aria-label="O que a LIV faz">
-    <p class="eyebrow">O QUE A LIV FAZ</p><h2>andar é só<br>uma parte.</h2>
+    <h2>andar é só<br>uma parte.</h2>
     <div class="moments" role="region" aria-label="Momentos do passeio" tabindex="0" id="moments">
-      <article class="moment"><div class="moment-copy"><p class="moment-num">01 / ANTES</p><h3>preparo a saída.</h3><p>Peitoral, guia, mosquetão. Tudo conferido antes do primeiro passo.</p><p class="micro">antes da rua.</p></div><img src="assets/harness-prep.webp" srcset="assets/harness-prep-720.webp 720w, assets/harness-prep-1080.webp 1080w, assets/harness-prep.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Detalhe do mosquetão preso ao peitoral verde antes do passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
-      <article class="moment"><div class="moment-copy"><p class="moment-num">02 / DURANTE</p><h3>o nariz também passeia.</h3><p>Andar, cheirar, observar, mudar o ritmo e parar quando precisa.</p><p class="micro">o caminho também é feito de cheiros.</p></div><img src="assets/sniffing-tree.webp" srcset="assets/sniffing-tree-720.webp 720w, assets/sniffing-tree-1080.webp 1080w, assets/sniffing-tree.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão de peitoral cheirando folhas ao redor de uma árvore durante o passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
-      <article class="moment"><div class="moment-copy"><p class="moment-num">03 / PAUSA</p><h3>pausa também conta.</h3><p>Água, sombra, descanso. Alguns dias pedem outro ritmo.</p><p class="micro">cuidado também é saber diminuir.</p></div><img src="assets/water-break.webp" srcset="assets/water-break-720.webp 720w, assets/water-break-1080.webp 1080w, assets/water-break.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão ao lado de um pote de água durante uma pausa na sombra" width="1448" height="1086" loading="lazy" decoding="async"></article>
-      <article class="moment"><div class="moment-copy"><p class="moment-num">04 / VOLTA</p><h3>de volta pra casa.</h3><p>Porta, elevador, retorno. A rotina termina onde começou.</p><p class="micro">chegada com o mesmo cuidado.</p></div><img src="assets/return-home.webp" srcset="assets/return-home-720.webp 720w, assets/return-home-1080.webp 1080w, assets/return-home.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão de guia atravessando a porta de casa ao retornar do passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><h3>preparo a saída.</h3><p>Peitoral, guia, mosquetão. Tudo conferido antes do primeiro passo.</p><p class="micro">antes da rua.</p></div><img src="assets/harness-prep.webp" srcset="assets/harness-prep-720.webp 720w, assets/harness-prep-1080.webp 1080w, assets/harness-prep.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Detalhe do mosquetão preso ao peitoral verde antes do passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><h3>o nariz também passeia.</h3><p>Andar, cheirar, observar, mudar o ritmo e parar quando precisa.</p><p class="micro">o caminho também é feito de cheiros.</p></div><img src="assets/sniffing-tree.webp" srcset="assets/sniffing-tree-720.webp 720w, assets/sniffing-tree-1080.webp 1080w, assets/sniffing-tree.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão de peitoral cheirando folhas ao redor de uma árvore durante o passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><h3>pausa também conta.</h3><p>Água, sombra, descanso. Alguns dias pedem outro ritmo.</p><p class="micro">cuidado também é saber diminuir.</p></div><img src="assets/water-break.webp" srcset="assets/water-break-720.webp 720w, assets/water-break-1080.webp 1080w, assets/water-break.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão ao lado de um pote de água durante uma pausa na sombra" width="1448" height="1086" loading="lazy" decoding="async"></article>
+      <article class="moment"><div class="moment-copy"><h3>de volta pra casa.</h3><p>Porta, elevador, retorno. A rotina termina onde começou.</p><p class="micro">chegada com o mesmo cuidado.</p></div><img src="assets/return-home.webp" srcset="assets/return-home-720.webp 720w, assets/return-home-1080.webp 1080w, assets/return-home.webp 1448w" sizes="(min-width: 860px) 490px, calc(100vw - 72px)" alt="Cão de guia atravessando a porta de casa ao retornar do passeio" width="1448" height="1086" loading="lazy" decoding="async"></article>
     </div>
     <div class="rail-nav moments-nav"><button type="button" id="momentsPrev" aria-label="Ver momento anterior" aria-controls="moments">←</button><button type="button" id="momentsNext" aria-label="Ver próximo momento" aria-controls="moments">→</button><span class="hint">arraste →</span></div>
   </section>
 
   <section id="notas-de-rua" class="field-notes" aria-label="Notas de rua">
     <div class="wrap field-notes-head">
-      <p class="mono eyebrow">FIELD NOTES / WALK LOG</p>
       <h2>a cidade deixa pistas. <em>a LIV presta atenção.</em></h2>
       <p class="prose">Cheiros, sombras e caminhos não são cenário. Eles fazem parte do passeio.</p>
     </div>
     <div class="field-grid">
       <figure class="field-note reveal">
         <img src="assets/nariz.webp" alt="Cão explorando os cheiros ao redor de uma árvore durante o passeio" width="900" height="506" loading="lazy" decoding="async">
-        <figcaption class="mono"><strong>01 / CHEIRO</strong><span>o nariz escolhe o caminho</span></figcaption>
+        <figcaption><span>o nariz escolhe o caminho</span></figcaption>
       </figure>
       <figure class="field-note reveal">
         <img src="assets/sombra.webp" alt="Cão e acompanhante caminhando por uma calçada coberta por sombras de árvores" width="900" height="506" loading="lazy" decoding="async">
-        <figcaption class="mono"><strong>02 / SOMBRA</strong><span>o clima muda o ritmo</span></figcaption>
+        <figcaption><span>o clima muda o ritmo</span></figcaption>
       </figure>
       <figure class="field-note field-note--path reveal">
         <img src="assets/hero-rua.webp" alt="Cão de peitoral caminhando pela calçada durante o passeio" width="1000" height="537" loading="lazy" decoding="async">
-        <figcaption class="mono"><strong>03 / CAMINHO</strong><span>o passo encontra o ritmo</span></figcaption>
+        <figcaption><span>o passo encontra o ritmo</span></figcaption>
       </figure>
     </div>
   </section>
 
   <section id="como-funciona" class="wrap" aria-label="Como funciona">
-    <p class="eyebrow">COMO FUNCIONA</p><h2>guia presa.<br>rua pela frente.</h2>
+    <h2>guia presa.<br>rua pela frente.</h2>
     <div class="steps">
       <div class="step"><span class="n">01</span><b>a gente conversa</b><span class="prose">Você conta um pouco sobre o cachorro e a rotina que precisa.</span></div>
       <div class="step"><span class="n">02</span><b>a rota do dia</b><span class="prose">Horário, caminho e o que aquele dia pede entram no combinado.</span></div>
@@ -268,43 +241,38 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   <section id="confianca" class="wrap" aria-label="Compromissos da LIV">
     <div class="trust-panel">
       <div class="trust-intro">
-        <p class="eyebrow">O QUE SUSTENTA O PASSEIO</p>
         <h2>confiança começa antes do primeiro passo.</h2>
         <p>O cuidado aparece em quatro decisões simples, repetidas todo passeio.</p>
         <a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">conversar sobre um passeio</a>
       </div>
       <ol class="trust-list">
-        <li><span>01</span><div><strong>contexto antes da saída</strong><p>A rotina e as informações importantes daquele dia entram na conversa.</p></div></li>
-        <li><span>02</span><div><strong>equipamento conferido</strong><p>Peitoral, guia e mosquetão são observados antes da rua.</p></div></li>
-        <li><span>03</span><div><strong>atenção ao ambiente</strong><p>Temperatura, cheiros, pausas e comportamento ajudam a definir o ritmo.</p></div></li>
-        <li><span>04</span><div><strong>cuidado até a volta</strong><p>O retorno encerra a rotina com a mesma atenção da saída.</p></div></li>
+        <li><div><strong>contexto antes da saída</strong><p>A rotina e as informações importantes daquele dia entram na conversa.</p></div></li>
+        <li><div><strong>equipamento conferido</strong><p>Peitoral, guia e mosquetão são observados antes da rua.</p></div></li>
+        <li><div><strong>atenção ao ambiente</strong><p>Temperatura, cheiros, pausas e comportamento ajudam a definir o ritmo.</p></div></li>
+        <li><div><strong>cuidado até a volta</strong><p>O retorno encerra a rotina com a mesma atenção da saída.</p></div></li>
       </ol>
     </div>
   </section>
 
   <section id="rotina" class="diary" aria-label="Rotina real">
-    <div class="wrap"><p class="mono eyebrow">ON THE WALK</p><h2>cada passeio tem seu próprio ritmo.</h2><p class="prose">Um diário curto do que acontece entre a saída e a volta.</p></div>
+    <div class="wrap"><h2>cada passeio tem seu próprio ritmo.</h2><p class="prose">Um diário curto do que acontece entre a saída e a volta.</p></div>
     <div class="rail" role="region" aria-label="Diário de passeios" tabindex="0" id="rail">
-      <article class="card"><img src="assets/elevator-return.webp" srcset="assets/elevator-return-720.webp 720w, assets/elevator-return-1080.webp 1080w, assets/elevator-return.webp 1448w" sizes="(min-width: 860px) 340px, 78vw" alt="Cão de guia se aproximando do elevador depois do passeio" width="1448" height="1086" loading="lazy" decoding="async"><div class="card-body"><small>WALK 022 / 09:10</small><strong>voltando pra casa.</strong><span>o elevador já faz parte do caminho.</span></div></article>
-      <article class="card"><img src="assets/water-detail.webp" srcset="assets/water-detail-720.webp 720w, assets/water-detail-1080.webp 1080w, assets/water-detail.webp 1448w" sizes="(min-width: 860px) 340px, 78vw" alt="Pote de água ao lado de um cão durante uma pausa na calçada" width="1448" height="1086" loading="lazy" decoding="async"><div class="card-body"><small>WALK 023 / 16:05</small><strong>pausa técnica.</strong><span>hoje o ritmo pediu água e sombra.</span></div></article>
-      <a class="card card-link" href="https://www.instagram.com/liv_passeios/"><div class="card-body"><small>ON THE WALK</small><strong>o resto<br>no Instagram →</strong><span>acompanhe os registros de rua da LIV.</span></div></a>
+      <article class="card"><img src="assets/elevator-return.webp" srcset="assets/elevator-return-720.webp 720w, assets/elevator-return-1080.webp 1080w, assets/elevator-return.webp 1448w" sizes="(min-width: 860px) 340px, 78vw" alt="Cão de guia se aproximando do elevador depois do passeio" width="1448" height="1086" loading="lazy" decoding="async"><div class="card-body"><strong>voltando pra casa.</strong><span>o elevador já faz parte do caminho.</span></div></article>
+      <article class="card"><img src="assets/water-detail.webp" srcset="assets/water-detail-720.webp 720w, assets/water-detail-1080.webp 1080w, assets/water-detail.webp 1448w" sizes="(min-width: 860px) 340px, 78vw" alt="Pote de água ao lado de um cão durante uma pausa na calçada" width="1448" height="1086" loading="lazy" decoding="async"><div class="card-body"><strong>pausa técnica.</strong><span>hoje o ritmo pediu água e sombra.</span></div></article>
+      <a class="card card-link" href="https://www.instagram.com/liv_passeios/"><div class="card-body"><strong>o resto<br>no Instagram →</strong><span>acompanhe os registros de rua da LIV.</span></div></a>
     </div>
     <div class="rail-nav"><button type="button" id="railPrev" aria-label="Ver registro anterior" aria-controls="rail">←</button><button type="button" id="railNext" aria-label="Ver próximo registro" aria-controls="rail">→</button><span class="hint">arraste →</span></div>
   </section>
 
   <section id="cuidado" class="wrap" aria-label="Cuidado na prática">
     <div class="care-layout">
-      <div><p class="eyebrow">CARE NOTE</p><h2>cuidado também está nos detalhes.</h2><p class="prose">Nem todo cuidado precisa virar discurso. Na rotina, ele aparece nas pequenas decisões antes, durante e depois da rua.</p><ul class="care-list care-columns"><li>conferir o mosquetão</li><li>ajustar o peitoral</li><li>levar água</li><li>observar o clima</li><li>perceber quando diminuir o ritmo</li><li>respeitar uma pausa</li><li>acompanhar a chegada e a saída</li></ul></div>
-      <figure class="care-visual reveal"><img src="assets/harness-care.webp" srcset="assets/harness-care-720.webp 720w, assets/harness-care-1080.webp 1080w, assets/harness-care.webp 1448w" sizes="(min-width: 860px) 500px, calc(100vw - 40px)" alt="Detalhe da guia e do peitoral ajustados no cão durante o passeio" width="1448" height="1086" loading="lazy" decoding="async"><figcaption class="cap mono"><span>EQUIPAMENTO</span><span>CONFERIDO</span></figcaption></figure>
+      <div><h2>cuidado também está nos detalhes.</h2><p class="prose">Nem todo cuidado precisa virar discurso. Na rotina, ele aparece nas pequenas decisões antes, durante e depois da rua.</p><ul class="care-list care-columns"><li>conferir o mosquetão</li><li>ajustar o peitoral</li><li>levar água</li><li>observar o clima</li><li>perceber quando diminuir o ritmo</li><li>respeitar uma pausa</li><li>acompanhar a chegada e a saída</li></ul></div>
+      <figure class="care-visual reveal"><img src="assets/harness-care.webp" srcset="assets/harness-care-720.webp 720w, assets/harness-care-1080.webp 1080w, assets/harness-care.webp 1448w" sizes="(min-width: 860px) 500px, calc(100vw - 40px)" alt="Detalhe da guia e do peitoral ajustados no cão durante o passeio" width="1448" height="1086" loading="lazy" decoding="async"><p class="care-note">Peitoral ajustado e guia presa antes de cada saída — o passeio começa no equipamento.</p></figure>
     </div>
   </section>
 
-  <section class="recognition" aria-label="Acompanhe a LIV">
-    <div class="wrap"><div class="recognition-note"><div><p class="eyebrow">LIV NO INSTAGRAM</p><h2>uma rotina que continua por lá.</h2><p>O dia a dia dos passeios segue registrado por lá: fotos, vídeos e registros reais da rua.</p></div><a href="https://www.instagram.com/liv_passeios/">acompanhar @liv_passeios →</a></div></div>
-  </section>
-
   <section id="faq" class="wrap" aria-label="Perguntas frequentes">
-    <p class="eyebrow">FAQ</p><h2>perguntas de rua.</h2>
+    <h2>perguntas de rua.</h2>
     <div class="faq-list">
       <details name="faq"><summary>como posso conhecer melhor o trabalho da LIV?</summary><p>O Instagram reúne os registros da rotina e é o melhor lugar para acompanhar o trabalho de perto.</p></details>
       <details name="faq"><summary>como posso conversar sobre um passeio?</summary><p>Chame a LIV pelo Instagram e conte um pouco sobre o cachorro e a rotina que você procura.</p></details>
@@ -313,11 +281,11 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   </section>
 
   <section id="contato" aria-label="Contato">
-    <div class="cta-final reveal"><div class="wrap"><img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="56" height="56"><p class="mono kicker">LIV PASSEIOS / INSTAGRAM</p><h2>tem passeio<br>esperando por aí.</h2><p>Quer conhecer melhor a rotina da LIV? Veja os registros e mande uma mensagem pelo Instagram.</p><div class="btn-row"><a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">conversar com a LIV</a></div></div></div>
+    <div class="cta-final reveal"><div class="wrap"><img class="logo" src="assets/logo-liv-256.png" alt="LIV Passeios" width="56" height="56"><h2>tem passeio<br>esperando por aí.</h2><p>Quer conhecer melhor a rotina da LIV? Veja os registros e mande uma mensagem pelo Instagram.</p><div class="btn-row"><a class="btn btn-solid" href="https://www.instagram.com/liv_passeios/">conversar com a LIV</a></div></div></div>
   </section>
 </main>
 
-<footer><div class="wrap footer-in"><img class="logo" src="assets/logo-liv-256.png" alt="" width="28" height="28" style="width:28px;height:28px"><span class="meta">LIV PASSEIOS · <span id="ano">2026</span></span><a class="meta footer-link" href="https://www.instagram.com/liv_passeios/">INSTAGRAM · @LIV_PASSEIOS</a></div></footer>
+<footer><div class="wrap footer-in"><img class="logo" src="assets/logo-liv-256.png" alt="" width="28" height="28" style="width:28px;height:28px"><span>LIV PASSEIOS · <span id="ano">2026</span></span><a class="footer-link" href="https://www.instagram.com/liv_passeios/">Instagram · @liv_passeios</a></div></footer>
 
 <script>
 document.documentElement.classList.add('js');
